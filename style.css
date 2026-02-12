@@ -60,6 +60,10 @@ body {
     padding-bottom: 1rem;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    color: #222;
+}
+
 h4 {
     /* CORRECTED: Darker heading color */
     color: #444;
@@ -107,7 +111,7 @@ td {
     padding: 12px;
     text-align: left;
     border: 1px solid #ddd;
-    color: #aaa; /* Low contrast */
+    color: #333; /* CORRECTED: Darker text for readability */
 }
 
 
@@ -161,5 +165,5 @@ td {
     padding: 20px;
     margin-top: 30px;
     background: #eee;
-    color: #aaa; /* Low contrast */
+    color: #333; /* CORRECTED: Darker footer text */
 }
