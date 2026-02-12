@@ -3,8 +3,8 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    /* ERROR: Poor contrast (light gray text on white/default background) */
-    color: #999; 
+    /* CORRECTED: Darker text for better contrast */
+    color: #333; 
     background-color: #fff;
 }
 
@@ -14,9 +14,10 @@ body {
     padding: 20px;
 }
 
-/* ERROR: Removing outline on focus makes keyboard navigation hard */
+/* CORRECTED: Ensure focus is visible for accessibility */
 *:focus {
-    outline: none;
+    outline: 2px solid #0056b3;
+    outline-offset: 2px;
 }
 
 #header {
@@ -44,8 +45,8 @@ body {
 .nav-links a {
     margin-right: 15px;
     text-decoration: none;
-    /* ERROR: Color contrast too low */
-    color: #6cf; 
+    /* CORRECTED: Darker blue for better contrast */
+    color: #004a80; 
     font-weight: bold;
 }
 
@@ -60,8 +61,8 @@ body {
 }
 
 h4 {
-    /* ERROR: Low contrast heading, skipped level */
-    color: #aaa;
+    /* CORRECTED: Darker heading color */
+    color: #444;
     border-left: 5px solid #ccc;
     padding-left: 10px;
     font-size: 1.5rem;
@@ -78,7 +79,7 @@ figure {
 
 figcaption {
     font-style: italic;
-    color: #ccc; /* Low contrast */
+    color: #555; /* CORRECTED: Darker gray */
     margin-top: 5px;
 }
 
