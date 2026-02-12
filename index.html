@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="eu"> <!-- ZUZENKETA 1: Hizkuntza zehaztu -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,123 +9,119 @@
 <body>
     <div class="container">
     
-    <!-- HEADER: Semantic element replaced with generic div -->
-    <div id="header">
+    <header id="header">
         <div class="logo-link">
-            <!-- ERROR: Missing alt attribute on logo -->
-            <img src="img/logo.jpg" class="logo">
+            <img src="img/logo.jpg" class="logo" alt="GimFit Store Logotipoa">
             <h1>03 lana, Web irisgarriak diseinatzea</h1>
         </div>
-        <!-- NAV: Semantic element replaced with generic div -->
-        <div class="nav-links">
+        <nav class="nav-links" aria-label="Nabigazio nagusia">
             <a href="index.html">Hasiera</a>
             <a href="html.html">HTML</a>
             <a href="css.html">CSS</a>
             <a href="js.html">JavaScript</a>
-        </div>
-    </div>
+        </nav>
+    </header>
 
-    <!-- MAIN: Semantic element replaced with generic div -->
-    <div id="main">
-        
-        <div class="section">
-            <!-- ERROR: Skipped heading level (h1 -> h4) -->
-            <h4>Irudi Galeria</h4>
+    <main id="main">
+        <section class="section">
+            <h2>Irudi Galeria</h2>
             
             <figure>
-                <!-- ERROR: Missing alt attribute -->
-                <img src="img/produktuak/10.jpg">
+                <img src="img/produktuak/10.jpg" alt="Amonax 5kg-ko pisu diskoak beltzak">
                 <figcaption>Irudia 1: Gure produktu nagusiaren erakusketa.</figcaption>
             </figure>
 
             <div class="gallery">
-                <!-- ERRORS: Missing alt attributes on all images -->
-                <img src="img/produktuak/2.jpg">
-                <img src="img/produktuak/5.jpg">
-                <img src="img/produktuak/8.jpg">
+                <img src="img/produktuak/2.jpg" alt="Pisu gorriak eta beltzak lurrean">
+                <img src="img/produktuak/5.jpg" alt="Barra eta pisuak gimnasioan">
+                <img src="img/produktuak/8.jpg" alt="Gimnasioko bankua">
             </div>
             
-            <p>Informazio gehiago nahi baduzu, <a href="info.html">klikatu hemen</a>.</p>
-        </div>
+            <p>Informazio gehiago nahi baduzu, <a href="info.html">kontsultatu produktuaren xehetasunak</a>.</p>
+        </section>
 
-        <div class="section">
-            <!-- ERROR: Skipped heading level -->
-            <h4>Datuen Taula</h4>
-            <!-- ERROR: Table missing caption, thead, th, scope -->
+        <section class="section">
+            <h2>Datuen Taula</h2>
             <table border="1">
-                <tr>
-                    <td style="font-weight: bold; background-color: #eee;">Urtea</td>
-                    <td style="font-weight: bold; background-color: #eee;">Bisitariak</td>
-                    <td style="font-weight: bold; background-color: #eee;">Hazkundea</td>
-                </tr>
-                <tr>
-                    <td>2023</td>
-                    <td>15.000</td>
-                    <td>%10</td>
-                </tr>
-                <tr>
-                    <td>2024</td>
-                    <td>22.000</td>
-                    <td>%45</td>
-                </tr>
+                <caption>Webgunearen bisitarien estatistikak urtez urte</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Urtea</th>
+                        <th scope="col">Bisitariak</th>
+                        <th scope="col">Hazkundea</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2023</td>
+                        <td>15.000</td>
+                        <td>%10</td>
+                    </tr>
+                    <tr>
+                        <td>2024</td>
+                        <td>22.000</td>
+                        <td>%45</td>
+                    </tr>
+                </tbody>
             </table>
-        </div>
+        </section>
 
-        <div class="section">
-            <h4>Bila ezazu gure webgunean</h4>
-            <!-- ERROR: Form input without label -->
+        <section class="section">
+            <h2>Bila ezazu gure webgunean</h2>
             <form action="#">
-                <input type="text" placeholder="Bilatu...">
-                <button>Bilatu</button>
+                <label for="search-input">Bilatu:</label>
+                <input type="text" id="search-input" name="search" placeholder="Adib: Pisuak...">
+                <button type="submit">Bilatu</button>
             </form>
-        </div>
+        </section>
 
-        <div class="section">
-            <h4>Multimedia Edukia</h4>
+        <section class="section">
+            <h2>Multimedia Edukia</h2>
             <div class="media-container">
                 <div class="audio-box">
-                    <h5>Audioa entzun</h5>
+                    <h3>Audioa entzun</h3>
                     <audio controls>
                         <source src="audio/gymusic.mp3" type="audio/mpeg">
+                        Zure nabigatzaileak ez du audio elementua onartzen.
                     </audio>
                 </div>
                 
                 <div class="video-box">
-                    <h5>Bideoa ikusi</h5>
-                    <!-- ERROR: Video missing track/captions -->
+                    <h3>Bideoa ikusi</h3>
                     <video controls width="320" height="240">
                         <source src="video/biceps.mp4" type="video/mp4">
+                        <track src="subtitles_eu.vtt" kind="captions" srclang="eu" label="Euskara">
+                        Zure nabigatzaileak ez du bideo elementua onartzen.
                     </video>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="section">
-            <h4>Kanpo Estekak (Sprites)</h4>
+        <section class="section">
+            <h2>Kanpo Estekak (Sare Sozialak)</h2>
             <ul class="sprite-links">
-                <!-- ERRORS: Links rely solely on background image, no text content, no aria-label -->
                 <li>
-                    <a href="https://www.facebook.com" target="_blank">
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Jarrai gaitzazu Facebook-en">
                         <span class="sprite sprite-facebook"></span>
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.google.com/chrome/" target="_blank">
+                    <a href="https://www.google.com/chrome/" target="_blank" rel="noopener" aria-label="Deskargatu Google Chrome">
                         <span class="sprite sprite-chrome"></span>
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.w3schools.com" target="_blank">
+                    <a href="https://www.w3schools.com" target="_blank" rel="noopener" aria-label="Ikasi W3Schools-en">
                         <span class="sprite sprite-w3schools"></span>
                     </a>
                 </li>
             </ul>
-        </div>
-    </div>
-    
-    <div id="footer">
+        </section>
+    </main>
+
+    <footer id="footer">
         <p>&copy; 2026 Web Irisgarritasuna. Eskubide guztiak erreserbatuta.</p>
-    </div>
+    </footer>
 
     </div>
 </body>
