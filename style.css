@@ -167,3 +167,43 @@ td {
     background: #eee;
     color: #333; /* CORRECTED: Darker footer text */
 }
+
+/* Form Styles for Accessibility */
+form {
+    margin-top: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #222; /* High contrast label */
+}
+
+input[type="text"] {
+    padding: 0.5rem;
+    border: 2px solid #555; /* High contrast border */
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #222;
+    background-color: #fff;
+}
+
+input::placeholder {
+    color: #555; /* Darker placeholder for contrast compliance */
+    opacity: 1;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    background-color: #004a80; /* High contrast background */
+    color: #fff; /* High contrast text */
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover, button:focus {
+    background-color: #003366; /* Even darker on hover/focus */
+}
